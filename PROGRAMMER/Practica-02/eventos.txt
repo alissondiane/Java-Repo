@@ -1,0 +1,15 @@
+1,Advanced Factories,Av.Bruselas 2343,2020-01-19,20,PLATINUM,500.0
+2,Barcelona Cybersecurity Congress,Av. Amenazaga 2346,2020-03-20,20,GOLD,350.0
+3,Digital Enterprise Show,Av. Venezuela 3423,2020-04-10,20,SILVER,100.0
+4,IoT Solutions World Congress,Av. Javier Prado 2343,2020-06-05,20,PLATINUM,500.0
+5,Global Robot Expo,Av. Alfonso Ugarte 2523,2020-07-07,20,GOLD,350.0
+6,Smart City Expo World Congress,Jr. El Derbi 2362,2020-09-09,20,SILVER,100.0
+7,Iot projects,Av. Arequipa 2356,2020-04-02,20,PLATINUM,500.0
+8,Artificial Intelligence Congress,Av. Universitaria,2020-12-28,20,GOLD,350.0
+9,Robotics Projects,Av. Priale 2345,2020-10-08,20,SILVER,100.0
+10,Advanced Technologies,Av. Ramirez 2345,2020-01-02,20,PLATINUM,500.0
+11,Last Technologies,Av. Ramirez 2345,2020-03-27,20,PLATINUM,500.0
+12,Digital Trends,Av. Ramirez 2345,2020-04-06,20,GOLD,350.0
+13,Robotics,Av. Ramirez 2345,2020-06-02,20,PLATINUM,500.0
+14,Last Frameworks,Av. Ramirez 2345,2020-04-21,20,GOLD,350.0
+15,Smart City World,Av. Ramirez 2345,2020-02-10,20,SILVER,100.0

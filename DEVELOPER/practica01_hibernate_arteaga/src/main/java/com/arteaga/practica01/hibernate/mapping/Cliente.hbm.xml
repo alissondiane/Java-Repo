@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/02/2014 10:36:45 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.arteaga.practica01.hibernate.domain.Cliente" table="CLIENTES">
+		<id name="idCliente" type="int">
+			<column name="idcliente" />
+			<generator class="increment"/>
+		</id>
+		<property name="nombres" type="java.lang.String">
+			<column name="NOMBRES" />
+		</property>
+		<property name="apellidos" type="java.lang.String">
+			<column name="APELLIDOS" />
+		</property>
+		<property name="correo" type="java.lang.String">
+			<column name="CORREO" />
+		</property>
+		<property name="telefono" type="java.lang.String">
+			<column name="TELEFONO" />
+		</property>
+	</class>
+
+	<query name="GET_CLIENTES_BY_ID_OR_NOMBRES_OR_APELLIDOS">
+		<![CDATA[from Cliente where (:idcliente is null or idCliente = :idcliente)
+		and (:nombres is null or nombres =:nombres)
+		and (:apellidos is null or apellidos =:apellidos)]]>
+	</query>
+	<query name="GET_CLIENTES_BY_ID">
+		<![CDATA[from Cliente where (:idcliente is null or idCliente = :idcliente)]]>
+	</query>
+	<query name="GET_CLIENTES_BY_NOMBRES">
+		<![CDATA[from Cliente where (:nombres is null or nombres = :nombres)]]>
+	</query>
+	<query name="GET_CLIENTES_BY_APELLIDOS">
+		<![CDATA[from Cliente where (:apellidos is null or apellidos = :apellidos)]]>
+	</query>
+</hibernate-mapping>

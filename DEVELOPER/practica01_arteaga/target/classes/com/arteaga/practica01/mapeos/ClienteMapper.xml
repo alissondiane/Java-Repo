@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.arteaga.practica01.daos.ClienteMapper">
+
+  <select id="getClienteById" parameterType="int" resultType="com.arteaga.practica01.pojos.Cliente">
+     SELECT 
+      idcliente as idCliente,
+      apellidos,
+      nombres,
+      correo,
+      telefono
+     FROM CLIENTES
+     WHERE IDCLIENTE = #{idCliente}
+  </select>
+  <!-- Instead of referencing Fully Qualified Class Names we can register Aliases in mybatis-config.xml and use Alias names. -->
+   <resultMap type="Cliente" id="ClienteResult">
+    <id property="idCliente" column="idcliente"/>
+    <result property="apellidos" column="apellidos"/>
+    <result property="nombres" column="nombres"/>
+    <result property="correo" column="correo"/>
+    <result property="telefono" column="telefono"/>
+   </resultMap>
+  
+  <select id="getAllClientes" resultMap="ClienteResult">
+   SELECT * FROM CLIENTES
+  </select>
+  
+  <insert id="insertCliente" parameterType="Cliente" useGeneratedKeys="true" keyProperty="idCliente">
+   INSERT INTO CLIENTES(nombres, apellidos, correo, telefono)
+    VALUES(#{nombres}, #{apellidos}, #{correo}, #{telefono})
+  </insert>
+  
+  <update id="updateCliente" parameterType="Cliente">
+    UPDATE CLIENTES
+    SET
+     NOMBRES= #{nombres},
+     APELLIDOS = #{apellidos},
+     CORREO = #{correo},
+     TELEFONO = #{telefono}
+    WHERE IDCLIENTE = #{idCliente}
+  </update>
+  
+  <delete id="deleteCliente" parameterType="int">
+    DELETE FROM CLIENTES WHERE IDCLIENTE = #{idCliente}
+  </delete>
+  
+</mapper>
